@@ -1,0 +1,81 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+$baseColor:#EFFBFB;
+$subColor: #A3F1FC;
+$accentColor: #2BC9FF;
+
+body {
+  background-color: $baseColor;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+}
+h1 {
+    color: $subColor;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.backg {
+  background-image: url("../images/NEKO_IMG.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#s-a{
+  background-color: $subColor;
+  text-align: center;
+  margin: 50px auto;
+  padding:30px;
+  .container {
+  display: flex;
+  flex-direction: row;
+}
+  .box{
+    background-color: $baseColor;
+    margin: 20px;
+    padding: 30px;
+    text-align: center;
+    flex: 1;
+    h2 {
+      background-color: $accentColor;
+      font-size: 1.6rem;
+      color: #fff; 
+      margin: 0px 0px 10px 0px;
+    }
+  }
+  @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+}
+
+#s-b{
+  text-align: center;
+  margin: 50px auto;
+  .button{
+    margin: 10px auto;
+    text-align: center;
+    padding: 5px 0;
+    width: 180px;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration:none;
+    background-color: $accentColor;
+    font-size: 1rem;
+    @include border-radius(10px);
+    &:hover {
+      background-color: darken($subColor, 15%);
+    }
+  }
+}
