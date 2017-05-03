@@ -13,9 +13,6 @@ body {
   line-height:1.6;
   letter-spacing: 0.1em; 
 }
-h1 {
-    color: $subColor;
-}
 
 .container {
   display: flex;
@@ -30,11 +27,16 @@ h1 {
   background-position: center center;
 }
 
+@media (max-width: 768px) {
+  .backg {
+    height: 250px;
+  }
+}
+
 #s-a{
   background-color: $subColor;
   text-align: center;
   margin: 50px auto;
-  padding:30px;
   .container {
   display: flex;
   flex-direction: row;
@@ -42,14 +44,16 @@ h1 {
   .box{
     background-color: $baseColor;
     margin: 20px;
-    padding: 30px;
     text-align: center;
     flex: 1;
-    h2 {
+    h1 {
       background-color: $accentColor;
       font-size: 1.6rem;
       color: #fff; 
       margin: 0px 0px 10px 0px;
+    }
+    p {
+      margin: 20px;
     }
   }
   @media (max-width: 768px) {
